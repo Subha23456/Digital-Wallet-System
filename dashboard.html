@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Wallet Dashboard</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: palevioletred;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header .profile {
+            font-size: 1em;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #0056b3;
+            padding: 10px;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .nav-menu li a:hover {
+            color: #ffca28;
+        }
+
+        /* Main Content */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: #fff;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0056b3;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Digital Wallet</div>
+        <div class="profile">Welcome, User</div>
+    </header>
+    
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="security.php">Security Checker</a></li>
+            <li><a href="transactions.php">Transactions</a></li>
+            <li><a href="payment.php">Payments</a></li>
+            <li><a href="setting.html">Settings</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="section">
+            <h2>Account Overview</h2>
+            <p><strong>Balance:</strong> $5000</p>
+            <a href="link_bank.php"><button>Link Bank</button></a>
+            <a href="transactions.php"><button>Make Transaction</button></a>
+            <a href="history.php"><button>History</button></a>
+        </section>
+        
+        <!-- Logout Button -->
+        <form method="POST" action="logout.php">
+            <button type="submit">Logout</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Digital Wallet. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-image: url("smart_wallet.gif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.5em;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Settings Section Container */
+        .settings-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        /* Modular Settings Section */
+        .settings-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .settings-section h2 {
+            font-size: 1.2em;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        /* Options List */
+        .settings-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .settings-option:last-child {
+            border-bottom: none;
+        }
+
+        .settings-option span {
+            font-size: 1em;
+        }
+
+        .settings-option a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .settings-option a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>Settings</header>
+
+    <div class="settings-container">
+        <!-- Account Settings Section -->
+        <div class="settings-section">
+            <h2>Account Settings</h2>
+            <div class="settings-option">
+                <span>Update Profile</span>
+                <a href="update-profile.html">Edit</a>
+            </div>
+            <div class="settings-option">
+                <span>Change Mobile Number</span>
+                <a href="change-mobile.html">Edit</a>
+            </div>
+        </div>
+
+        <!-- Payment Settings Section -->
+        <div class="settings-section">
+            <h2>Payment Settings</h2>
+            <div class="settings-option">
+                <span>Bank Accounts</span>
+                <a href="manage-banks.html">Manage</a>
+            </div>
+            <div class="settings-option">
+                <span>UPI ID</span>
+                <a href="upi-id.html">Edit</a>
+            </div>
+        </div>
+
+        <!-- Security Settings Section -->
+        <div class="settings-section">
+            <h2>Security Settings</h2>
+            <div class="settings-option">
+                <span>Change Password</span>
+                <a href="change-password.html">Change</a>
+            </div>
+            <div class="settings-option">
+                <span>Two-Factor Authentication</span>
+                <a href="enable-2fa.html">Enable</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

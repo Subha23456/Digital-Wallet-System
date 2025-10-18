@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Settings</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f6f9;
+    }
+
+    .navbar {
+      background-color: #007bff;
+      color: white;
+      padding: 16px;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #343a40;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover, .sidebar a.active {
+      background-color: #495057;
+    }
+
+    .main-content {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .settings-form {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="email"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .main-content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    Admin Panel - Settings
+  </div>
+
+  <div class="sidebar">
+    <a href="admin_dashboard.php">Dashboard</a>
+    <a href="admin_users.php">Users</a>
+    <a href="admin_settings.php" class="active">Settings</a>
+    <a href="admin_reports.php">Reports</a>
+    <a href="logout.php">Logout</a>
+  </div>
+
+  <div class="main-content">
+    <h2>System Settings</h2>
+
+    <form class="settings-form" method="POST" action="#">
+      <label for="site_name">Site Name</label>
+      <input type="text" id="site_name" name="site_name" placeholder="Digital Wallet System">
+
+      <label for="admin_email">Admin Email</label>
+      <input type="email" id="admin_email" name="admin_email" placeholder="admin@example.com">
+
+      <label for="transaction_limit">Max Transaction Limit (₹)</label>
+      <input type="number" id="transaction_limit" name="transaction_limit" min="1" placeholder="10000">
+
+      <button type="submit">Save Settings</button>
+    </form>
+  </div>
+
+</body>
+</html>
